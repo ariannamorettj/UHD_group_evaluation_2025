@@ -3753,7 +3753,10 @@ textarea.form-control-lg {
   align-items: center;
   justify-content: space-between;
   padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
+  overflow: hidden;
 }
+
+
 .navbar > .container,
 .navbar > .container-fluid,
 .navbar > .container-sm,
@@ -3765,6 +3768,8 @@ textarea.form-control-lg {
   flex-wrap: inherit;
   align-items: center;
   justify-content: space-between;
+  max-width: 100%;
+  width: 100%;
 }
 .navbar-brand {
   padding-top: var(--bs-navbar-brand-padding-y);
@@ -10949,6 +10954,12 @@ p {
     margin-right: 0;
   }
 }
+
+
+
+
+
+
 header.masthead {
   padding-top: 10.5rem;
   padding-bottom: 6rem;
@@ -10975,6 +10986,8 @@ header.masthead::before {
   /* Assicura che la scritta sopra resti visibile */
   z-index: -1;
 }
+
+/* Stile sottotitolo */
 header.masthead .masthead-subheading {
   font-size: 1.5rem;
   font-style: italic;
@@ -10982,14 +10995,23 @@ header.masthead .masthead-subheading {
   margin-bottom: 25px;
   font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+
+/* Stile titolo */
 header.masthead .masthead-heading {
-  font-size: 3.25rem;
+  font-size: clamp(2rem, 5vw, 4.5rem); /* Dimensione adattiva */
   font-weight: 700;
-  line-height: 3.25rem;
+  line-height: 1.2; /* Migliore leggibilità */
   margin-bottom: 2rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  text-align: center;
+  white-space: normal; /* Permette il ridimensionamento */
+  word-break: break-word; /* Evita overflow */
+  overflow-wrap: break-word;
+  max-width: 90%; /* Mantiene il testo all'interno della sezione */
+  margin: 0 auto;
 }
 
+/* Desktop */
 @media (min-width: 768px) {
   header.masthead {
     padding-top: 17rem;
@@ -11002,12 +11024,20 @@ header.masthead .masthead-heading {
     margin-bottom: 2rem;
   }
   header.masthead .masthead-heading {
-    font-size: 4.5rem;
-    font-weight: 700;
-    line-height: 4.5rem;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
     margin-bottom: 4rem;
   }
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  .masthead-heading {
+    font-size: clamp(1.5rem, 6vw, 3rem); /* Più leggibile sui telefoni */
+    padding: 0 10px; /* Aggiungi margine ai lati per evitare tagli */
+  }
+}
+
+
 
 
 section.masthead {
@@ -11397,4 +11427,24 @@ section#contact form#contactForm :-ms-input-placeholder {
   text-align: center;
   font-size: 0.9rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* Nasconde l'eventuale scorrimento orizzontale */
+}
+
+.container {
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.masthead {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
 }
