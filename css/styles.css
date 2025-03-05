@@ -211,8 +211,35 @@ dd {
   margin-left: 0;
 }
 
+
 blockquote {
-  margin: 0 0 1rem;
+    background-color: #280E27 !important; /* Sfondo blu scuro */
+    padding: 20px;
+    border-left: 5px solid #FFA409;
+    font-style: italic;
+    color: #FCF5C9 !important; /* Testo giallo acceso */
+    margin: 20px 0;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-shadow: none !important; /* Rimuove eventuali effetti di ombreggiatura */
+    opacity: 1 !important; /* Imposta l'opacità massima */
+}
+
+blockquote * {
+    color: #FFA409 !important; /* Forza il colore su tutti gli elementi dentro il blockquote */
+}
+
+blockquote p {
+    color: #FFA409 !important; /* Assicura che il testo nei paragrafi sia giallo */
+}
+
+blockquote footer {
+    margin-top: 10px;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-align: right;
+    color: #FFA409 !important; /* Testo giallo per il footer */
+    opacity: 1 !important; /* Evita trasparenze indesiderate */
 }
 
 b,
@@ -583,7 +610,9 @@ progress {
 .blockquote {
   margin-bottom: 1rem;
   font-size: 1.25rem;
+  color: #FFA409 !important; /* Forza il testo in giallo */
 }
+
 .blockquote > :last-child {
   margin-bottom: 0;
 }
@@ -592,10 +621,12 @@ progress {
   margin-top: -1rem;
   margin-bottom: 1rem;
   font-size: 0.875em;
-  color: #6c757d;
+  color: #FFA409 !important; /* Cambia il colore in giallo */
 }
+
 .blockquote-footer::before {
   content: "— ";
+  color: #FFA409 !important; /* Forza il colore del trattino */
 }
 
 .img-fluid {
