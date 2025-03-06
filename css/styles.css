@@ -247,6 +247,20 @@ strong {
   font-weight: bolder;
 }
 
+strong.unel {
+color: #28A0C0;
+}
+
+strong.concl {
+    color: #280E27;
+    background: linear-gradient(120deg, #E9AE36 40%, transparent 60%);
+    background-repeat: no-repeat;
+    background-size: 100% 60%;
+    background-position: 0 80%;
+    padding: 2px 4px;
+    display: inline;
+}
+
 small, .small {
   font-size: 0.875em;
 }
@@ -8301,6 +8315,16 @@ textarea.form-control-lg {
 
 .rounded-circle {
   border-radius: 50% !important;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.rounded-circle {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transform: scale(1.2); /* Adjust the scale factor for more or less zoom */
 }
 
 .rounded-pill {
@@ -11478,4 +11502,20 @@ html, body {
     width: 100%;
     padding-left: 0;
     padding-right: 0;
+}
+
+.conclusions-container {
+    background: url('/assets/img/conclusions.jpg') center/cover no-repeat;
+    background-attachment: fixed; /* Optional: Parallax effect */
+    padding: 80px 0; /* Adjust vertical padding if needed */
+    border-radius: 8px; /* Optional: Soft rounded corners */
+}
+
+
+.section-heading.conclu {
+    color: white; /* Ensures high contrast */
+    text-shadow:
+        2px 2px 8px rgba(0, 0, 0, 0.6),  /* Soft large shadow */
+        1px 1px 3px rgba(0, 0, 0, 0.5),  /* Mid-level shadow */
+        0px 0px 2px rgba(0, 0, 0, 0.8);  /* Slightly sharper edge */
 }
