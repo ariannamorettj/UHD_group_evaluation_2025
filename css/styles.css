@@ -11505,7 +11505,7 @@ html, body {
 }
 
 .conclusions-container {
-    background: url('/assets/img/conclusions.jpg') center/cover no-repeat;
+    background: url('../assets/img/conclusions.jpg') center/cover no-repeat;
     background-attachment: fixed; /* Optional: Parallax effect */
     padding: 80px 0; /* Adjust vertical padding if needed */
     border-radius: 8px; /* Optional: Soft rounded corners */
